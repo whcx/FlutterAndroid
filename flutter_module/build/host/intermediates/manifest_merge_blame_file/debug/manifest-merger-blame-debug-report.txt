@@ -1,0 +1,88 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.flutter_module.host"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml
+10
+11    <!--
+12         The INTERNET permission is required for development. Specifically,
+13         flutter needs it to communicate with the running application
+14         to allow setting breakpoints, to provide hot reload, etc.
+15    -->
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:9:5-66
+16-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:9:22-64
+17
+18    <application
+18-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:11:5-38:19
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.1.0] C:\Users\jianlin\.gradle\caches\transforms-2\files-2.1\d67cd79abd1ca209502f51c69d23182b\core-1.1.0\AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:icon="@mipmap/ic_launcher"
+21-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:13:9-43
+22        android:label="flutter_module" >
+22-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:12:9-39
+23        <activity
+23-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:14:9-32:20
+24            android:name="com.example.flutter_module.host.MainActivity"
+24-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:15:13-41
+25            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+25-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:18:13-163
+26            android:hardwareAccelerated="true"
+26-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:19:13-47
+27            android:launchMode="singleTop"
+27-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:16:13-43
+28            android:theme="@style/LaunchTheme"
+28-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:17:13-47
+29            android:windowSoftInputMode="adjustResize" >
+29-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:20:13-55
+30
+31            <!--
+32                 This keeps the window background of the activity showing
+33                 until Flutter renders its first frame. It can be removed if
+34                 there is no splash screen (such as the default splash screen
+35                 defined in @style/LaunchTheme).
+36            -->
+37            <meta-data
+37-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:25:13-27:40
+38                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
+38-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:26:17-82
+39                android:value="true" />
+39-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:27:17-37
+40
+41            <intent-filter>
+41-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:28:13-31:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:29:17-68
+42-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:29:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:30:17-76
+44-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:30:27-74
+45            </intent-filter>
+46        </activity>
+47        <!--
+48             Don't delete the meta-data below.
+49             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+50        -->
+51        <meta-data
+51-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:35:9-37:33
+52            android:name="flutterEmbedding"
+52-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:36:13-44
+53            android:value="2" />
+53-->D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\app\src\main\AndroidManifest.xml:37:13-30
+54        <meta-data
+54-->[:flutter] D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\Flutter\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-18:38
+55            android:name="flutterProjectType"
+55-->[:flutter] D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\Flutter\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-46
+56            android:value="module" />
+56-->[:flutter] D:\Flutter-sdk\FlutterAndroid\flutter_module\.android\Flutter\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-35
+57    </application>
+58
+59</manifest>
