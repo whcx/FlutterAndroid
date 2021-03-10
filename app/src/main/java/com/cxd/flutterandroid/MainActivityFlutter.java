@@ -21,6 +21,8 @@ public class MainActivityFlutter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        PlatformChannelManage.registerLog();
         flutterViewEngine = new FlutterViewEngine(FlutterEngineCache.getInstance().get(FLUTTER_ENGINE_ID));
         flutterView = new FlutterView(this);
         flutterViewEngine.attachFlutterView(flutterView);

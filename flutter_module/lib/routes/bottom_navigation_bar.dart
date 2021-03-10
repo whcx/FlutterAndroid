@@ -3,26 +3,19 @@ import 'package:animations/animations.dart';
 
 import 'package:flutter_gen/gen_l10n/my_localizations.dart';
 
-enum BottomNavigationDemoType {
-  withLabels,
-  withoutLabels,
-}
-
-class BottomNavigationDemo extends StatefulWidget {
-  const BottomNavigationDemo({
+class BottomNavigationMain extends StatefulWidget {
+  const BottomNavigationMain({
     Key key,
     @required this.restorationId,
-    @required this.type,
   }) : super(key: key);
 
   final String restorationId;
-  final BottomNavigationDemoType type;
 
   @override
-  _BottomNavigationDemoState createState() => _BottomNavigationDemoState();
+  _BottomNavigationMainState createState() => _BottomNavigationMainState();
 }
 
-class _BottomNavigationDemoState extends State<BottomNavigationDemo>
+class _BottomNavigationMainState extends State<BottomNavigationMain>
     with RestorationMixin {
   final RestorableInt _currentIndex = RestorableInt(0);
 
@@ -38,18 +31,6 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo>
   void dispose() {
     _currentIndex.dispose();
     super.dispose();
-  }
-
-  String _title(BuildContext context) {
-    switch (widget.type) {
-      case BottomNavigationDemoType.withLabels:
-        return MyLocalizations.of(context)
-            .demoBottomNavigationPersistentLabels;
-      case BottomNavigationDemoType.withoutLabels:
-        return MyLocalizations.of(context)
-            .demoBottomNavigationSelectedLabel;
-    }
-    return '';
   }
 
   @override
@@ -73,19 +54,11 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo>
       ),
     ];
 
-    if (widget.type == BottomNavigationDemoType.withLabels) {
-      bottomNavigationBarItems = bottomNavigationBarItems.sublist(
-          0, bottomNavigationBarItems.length - 2);
-      _currentIndex.value = _currentIndex.value
-          .clamp(0, bottomNavigationBarItems.length - 1)
-          .toInt();
-    }
-
     return Scaffold(
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-      //   title: Text(_title(context)),
-      // ),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Text("FlutterUI"),
+      ),
       body: Center(
         child: PageTransitionSwitcher(
           child: _NavigationDestinationView(
@@ -103,8 +76,6 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo>
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        showUnselectedLabels:
-            widget.type == BottomNavigationDemoType.withLabels,
         items: bottomNavigationBarItems,
         currentIndex: _currentIndex.value,
         type: BottomNavigationBarType.fixed,
